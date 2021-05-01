@@ -1,0 +1,353 @@
+/****************************************************************************************************
+	Basic reset , normalize the CSS , cross browswer reset , for broswer to render page consistantly
+*****************************************************************************************************/
+header, footer, nav, section {
+	display: block;
+  }
+
+html {
+    font-size: 62.5%; }
+    
+body {
+    box-sizing: border-box; }
+    
+body {
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 1.7;
+    color: #777;
+    padding: 10px; }
+
+.margin-top-10{
+        margin-top: 10% ;
+    }
+
+.padding-5{
+    padding: 10%;
+}
+
+/***********************************************
+	        Default Backgrond Style
+***********************************************/
+
+#home-background{
+	height: 90vh;
+	/*95% of viewport height*/
+	/* background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-8.jpg); */
+	background-size: cover;
+	background-position: top;	
+	position: relative;
+	clip-path: polygon(0 0, 100% 0, 100% 85vh, 0 100%);
+	/*polygon(x y,x y,x y) move clockwise*/
+	
+}
+
+.background{
+	height: 90vh	;
+	/*95% of viewport height*/
+	background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/nat-8.jpg);
+	background-size: cover;
+	background-position: top;	
+	position: relative;
+	clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
+	/*polygon(x y,x y,x y) move clockwise*/
+	
+}
+
+.no-background{
+    margin-top: 50px;
+	margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+/**********************
+   Default Logo style
+***********************/
+
+.header .logo-box {
+    position: absolute;
+    top: 8px;
+    left: 20px; }
+.header .logo {
+    height: 30px; }
+
+/**********************
+   nav-bar  style
+***********************/
+
+.nav-link { 
+    font-size: 1.7rem;
+ } 
+
+
+.navbar-light .navbar-nav .active>.nav-link, .navbar-light .navbar-nav .nav-link:hover{
+    /* color: #fff; */
+    box-shadow: inset 0 0px 0 white, inset 0 -3px 0 rgb(121, 245, 146);
+}
+.navbar .navbar-collapse.show {
+    /*background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));*/
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(109, 205, 142, 0.9));;
+
+}
+
+
+/**********************
+      Carousel
+***********************/
+#carouselExampleIndicators .carousel-inner .carousel-item .image-1 {
+    background-image: url(../img/nat-9.jpg);
+    background-size: cover;
+    background-position: center; 
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item .image-2 {
+    background-image: url(../img/nat-8.jpg);
+    background-size: cover;
+    background-position: center; 
+}
+
+#carouselExampleIndicators .carousel-inner .carousel-item .image-3 {
+    background-image: url(../img/nat-11.jpg);
+    background-size: cover;
+    background-position: center; 
+}
+
+.green-gradient {
+    background-image: linear-gradient(to right bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8));
+}
+
+/**********************
+     section style
+***********************/
+ 
+.text-header-home {
+    position: absolute;
+    top: 50%;
+    /*image a box, 40% measure from (0 0 of x y)*/
+    left: 50%;
+    /*image a box, 50% measure from (0 0 of x y)*/
+    transform: translate(-50%, -50%);
+    /*hence, have to minus 50% from x and y in order to position at the centre */
+    text-align: center; }
+
+/**********************
+   Home Heading style
+***********************/
+
+.heading-primary {
+	color: #fff;
+	text-transform: uppercase;
+	backface-visibility: hidden;
+    margin-bottom: 60px; }
+  
+.heading-primary .heading-primary-main {
+    display: block;
+    font-size: 60px;
+    font-weight: 400;
+    margin-right: -35px;
+    /* text-indent: 35px; */
+    letter-spacing: 35px;
+    animation-name: moveInLeft;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    /*animation-delay: 3s;
+    animation-iteration-count:3;*/ }
+ 
+.heading-primary .heading-primary-sub {
+	display: block;
+	font-size: 20px;
+	font-weight: 700;
+	/* text-indent: 17.4px; */
+    margin-right: -17.4px;
+	letter-spacing: 17.4px;
+	/*animation-name: moveInRight ;
+	animation-duration: 1s ;*/
+	animation: moveInRight 1s ease-out;
+	}
+    
+.heading-secondary{
+        color: #fff;
+        text-transform: uppercase;
+        display: block;
+        font-size: 20px;
+        font-weight: 700;
+        margin-right: -17.4px;
+        letter-spacing: 17.4px;
+        animation: moveInRight 1s ease-out;
+    }	
+
+/***************************
+   Default Paragraph style
+****************************/  
+.para-main{
+	color: #fff;
+	display: block;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 5px;
+    animation-name: moveInBottom ;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+	text-align: justify;
+}	
+  
+p{
+	color: rgba(119,119,119);
+	display: block;
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 3px;
+	text-align: justify;
+}
+
+.heading-secondary-green {
+	color: #83D58F;
+	text-transform: uppercase;
+	display: block;
+	font-size: 25px;
+	font-weight: 700;
+	letter-spacing: 17.4px;
+	text-align: justify;
+	text-align: center;
+	margin: 10px 0;
+	
+}
+
+/****************************
+   Home Heading Animation
+*****************************/
+@keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px); }
+    80% {
+      transform: translateX(10px); }
+    100% {
+      opacity: 1;
+      transform: translateX(0); } }
+  
+  @keyframes moveInRight {
+    0% {
+      opacity: 0;
+      transform: translateX(100px); }
+    80% {
+      transform: translateX(-10px); }
+    100% {
+      opacity: 1;
+      transform: translateX(0); } }	
+
+
+
+/*************************
+      Button style Home
+**************************/
+.btn{
+    font-size: 1.5rem;
+}
+
+.btn-white {
+	background-color: #fff;
+	color: #777; }
+	
+  
+.btn-white::after {
+    background-color: #fff; }
+	
+	
+.btn-green {
+	background-color: #55c57a;
+	color: #fff; }
+	
+  
+.btn-green::after {
+    background-color: #55c57a;
+ }
+
+.btn:link, .btn:visited {
+	/*btn after visited*/
+	text-transform: uppercase;
+	text-decoration: none;
+	padding: 15px 40px;
+	display: inline-block;
+	border-radius: 100px;
+	transition: all .2s;
+	position: relative; }
+
+/****************************
+    Default Button Animation
+*****************************/
+.btn-animated {
+	animation: moveInBottom .5s ease-out .75s;
+	animation-fill-mode: backwards; }
+
+@keyframes moveInBottom {
+  0% {
+    opacity: 0;
+    transform: translateY(30px); }
+  100% {
+    opacity: 1;
+    transform: translate(0); } }
+
+/****************************
+     Button Hover Style
+*****************************/
+.btn:hover {
+	transform: translateY(-3px);
+	box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+	/*x direction  y direction , blur effect ,color*/ }
+  
+.btn:hover::after {
+    transform: scaleX(1.4) scaleY(1.6);
+    opacity: 0; }
+
+.btn:active {
+	/*when btn is being clicked*/
+	transform: translateY(-1px);
+	box-shadow: 0 10px 10px rgba(0, 0, 0, 0.2);
+	/*x direction  y direction , blur effect ,color*/ }
+
+.btn::after {
+	content: "";
+	display: inline-block;
+	height: 100%;
+	width: 100%;
+	border-radius: 100px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	z-index: -1;
+	transition: all .4s; }
+
+/**********************
+      footer style
+***********************/
+.myfooter {
+	/*position: fixed;*/
+	text-align: center;
+	left: 0;
+	bottom: 0;
+    width: 100%;
+    font-size: 14px;
+}
+
+.social-media {
+    margin: 0 10px;
+    padding: 10px 0;   
+}
+
+.twitter {
+    color: #00acee;
+}
+
+.facebook{
+    color: #3b5998;
+}
+
+.whatsapp {
+    color: #25d366;
+}
+

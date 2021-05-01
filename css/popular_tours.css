@@ -1,0 +1,36 @@
+.card-img-top{
+    height: 11rem; 
+    width: auto; 
+    object-fit: contain;
+    padding: 10px ;
+}
+
+.card:hover {
+    border: 2px solid #00FA9A ;
+    box-shadow: inset 0 0 10px rgba(0,0,0,.2), 0 10px 10px rgba(0,0,0,0.1);
+
+}
+
+.btn:hover {
+    color: #fff;
+}
+
+.tour-title{
+    color: #83D58F;
+    font-weight: bold;
+    letter-spacing: 2px;
+
+}
+
+
+.modal-body>p {
+    font-size: 12px;
+    letter-spacing: 2px;
+
+}
+
+.modal-body>p:hover{
+    color:  #39CCCC ;
+    font-weight: bold;
+}
+

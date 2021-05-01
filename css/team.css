@@ -1,0 +1,90 @@
+.team {
+	display: flex;
+	width: auto;
+	justify-content: center;
+	flex-wrap: wrap;
+	
+}.team .team-member {
+	/**background: rgba(40, 180, 133);**/
+	margin: 15px 15px 70px 15px;
+	width: 300px;
+	padding: 20px;
+	line-height: 20px;
+	position: relative;
+	border-radius: 10px;
+	box-shadow: inset 0 0 10px rgba(0,0,0,.2), 0 10px 10px rgba(0,0,0,0.1);
+    background: linear-gradient(135deg, rgba(40,180,133),rgba(70,180,124), rgba(126, 213, 111, 0.8));
+}
+
+.team .team-member h3{
+	font-size: 20px ;
+	margin-top: 70px;
+	text-align: center;
+	color: #fff;
+	
+ }
+ 
+.team .team-member p.role {
+	color: #fff;
+	margin: 12px 0;
+	text-align: center;
+		
+}
+
+.team .team-member p {
+	color: #fff;
+	margin: 12px 0;
+	letter-spacing: 2px;
+	text-align: justify;
+		
+}
+
+.team .team-member .team-img{
+	width: 110px;
+	height: 110px;
+	border-radius: 50%;
+	position: absolute;
+	left: 50%;
+	top: -50px;
+	transform: translateX(-50%);
+	background: rgba(40, 180, 133);
+}
+
+.team .team-member .team-img img {
+	width: 110px;
+    height: 110px;
+    border-radius: 50%;
+	padding: 5px;
+
+}
+
+
+/****************************
+      Wiggles when Hover
+*****************************/
+
+.team .team-member:hover{
+	animation-duration: 450ms;
+    animation-timing-function: linear;
+    animation-iteration-count: 1;
+    animation-name: wiggle;
+	
+}
+
+/****************************
+      Wiggle Animation
+*****************************/
+
+@keyframes wiggle {
+  0% { transform: translate(1px, 0); }
+  10% { transform: translate(-1px, 0); }
+  20% { transform: translate(1px, 0); }
+  30% { transform: translate(-1px, 0); }
+  40% { transform: translate(1px, 0); }
+  50% { transform: translate(-1px, 0); }
+  60% { transform: translate(1px, 0); }
+  70% { transform: translate(-1px, 0); }
+  80% { transform: translate(1px, 0); }
+  90% { transform: translate(-1px, 0); }
+  100% { transform: translate(0, 0); }
+}

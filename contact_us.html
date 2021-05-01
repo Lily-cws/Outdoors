@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://use.fontawesome.com/3d1960e99b.js"></script>
+        
+        <!-- Latest compiled and minified CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+        
+        <!--custom external stylesheet and javascript-->
+		<link rel="stylesheet" href="css/base.css">
+		<link rel="stylesheet" href="css/contact_us.css">
+		<link rel="stylesheet" href="css/style.css">
+		<link rel="shortcut icon" type="image/png" href="img/favicon.png">	
+		<script src="js/formsubmit.js"></script>
+		<script src="js/serviceworker.js"></script>
+		
+		<!--PWA manifest json-->
+        <link rel="manifest" href="manifest.json">
+        <title>OUTDOORS | Contact Us</title>
+
+        
+    </head>
+    <body>
+		<section class="background">
+            <header class="header">               
+                <nav class="navbar navbar-expand-md fixed-top navbar-light justify-content-end mt-3"> 
+                    <h1 class="logo-box">
+                        <a href="index.html">
+                        <img src="img/logo-white.png" alt="OUTDOORS" class="logo">
+                        </a>
+                    </h1>
+                    <button class="navbar-toggler border-white mt-3 mr-3" data-toggle="collapse" data-target="#collapse_target">
+                        <span>
+                            <i class="fa fa-bars text-white" style="font-size: 20px;"></i>
+                        </span>
+                    </button>
+
+                    <div class="collapse navbar-collapse text-right" id="collapse_target">
+                        <ul class="navbar-nav ml-auto d-inline-block d-md-flex">                       
+                                <li class="nav-item"><a href="index.html" class="nav-link text-white p-0 mx-3">Home</a></li>
+                                <li class="nav-item"><a href="about.html" class="nav-link text-white p-0 mx-3">About</a></li>
+                                <li class="nav-item"><a href="services.html" class="nav-link text-white p-0 mx-3">Services</a></li>
+                                <li class="nav-item"><a href="popular_tours.html" class="nav-link text-white p-0 mx-3">Popular Tours</a></li>
+                                <li class="nav-item active"><a href="contact_us.html" class="nav-link text-white p-0 mx-3">Contact</a></li>
+                        </ul>
+                    </div>
+                </nav>   
+            </header>
+            
+			<section class="text-header-home container">
+				<h1 class="heading-primary">
+					<span class="heading-primary-main text-center">Contact Us</span>
+				</h1>				           
+			</section>    
+		</section>
+		<section class="no-background container" >
+			<section class="text-content container">
+				<h2 class="heading-secondary-green">Where We Are</h2>
+				<map class="googlemap">
+					<div class="gmap_canvas">
+						<iframe width="100%" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=singapore%20polytechnic%20&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>						
+					</div>
+				</map>				
+			</section>	
+				<section class="container">
+					<div class="row">
+						<div class="col-md-4 align-self-stretch">
+								<address>
+								<b>Singapore Polytechnic</b><br/>
+								500 Dover Rd,<br/>
+								Singapore 139651
+								</address>
+								
+								<p class="p-info">
+								<b>Operating hours</b><br/>
+								10am to 8pm (Mon-Sat)<br/>
+								12pm to 6pm (Sun & PH)</p>
+								
+								<p class="p-info">Tel: <a href="tel:+6565124567" class="a-info">(+65) 6512 4567</a>
+								
+								<p class="p-info">
+								<b>Email Address</b><br/>
+								<a href="mailto:contactus@outdoors.com" class="a-info">contactus@outdoors.com</a></p>
+						</div>
+						<div class="col-md-8">
+							<a id="contact-us-form"></a>
+							<form class="contact-form">
+								<ul class="error-messages"></ul>
+								<ul class="success-messages">You have successfully submitted the form! Our agent will contact you shortly.</ul>
+								<div class="form-group">
+									<label for="name">Full Name</label><span style="color:red">*</span> :
+									<input id="name" class="form-control" type="text" required placeholder="Full name">
+								</div>
+								<div class="form-group">
+									<label for="email">Email Address</label><span style="color:red">*</span> :
+									<input id="email" class="form-control"  type="email" required placeholder="Email Address">
+								</div>
+								<div class="form-group">
+									<label for="contact-no">Contact Number</label><span style="color:red">*</span> :
+									<input id="contact-no" class="form-control" type="tel" required pattern="[6,8,9]{1}[0-9]{7}" 
+										placeholder="Contact Number"
+										title="Please provide a valid Singapore contact number">
+								</div>
+								<div class="form-group">
+									<label for="Subject">Subject</label><span style="color:red">*</span> :
+									<select id="Subject" name="Subject" class="form-control" required onchange="showTravellers(this.value)">
+										<option value="">Select a subject</option>
+										<option value="general-enquiry">General Enquiry</option>
+										<option value="tour-packages">Tour Pakages</option>
+										<option value="flight-booking">Flight Booking</option>
+										<option value="travel-insurance">Travel Insurance</option>
+									</select>
+								</div>
+								<div class="form-group number-of-travellers">
+									<div class="row">
+										<div class="col-12">
+											<label for="grp-size">Number of Traveller</label><span style="color:red">*</span> :
+										</div>
+											<div class="col-md-4">
+												<label for="grp-size-A">Adult (12+yrs) :</label>
+												<input name="grp-size-A" class="form-control" id="grp-size" type="Number" placeholder="0" min="1" max="20" required>
+											</div>
+											<div class="col-md-4">
+												<label for="grp-size-C">Children (2-11yrs) :</label>
+												<input name="grp-size-C" class="form-control" id="grp-size" type="Number" placeholder="0" min="1" max="20" required>
+											</div>
+											<div class="col-md-4">
+												<label for="grp-size-I">Infant (0-2yrs) :</label>
+												<input name="grp-size-I" class="form-control" id="grp-size" type="Number" placeholder="0" min="1" max="20" required>
+											</div>
+									</div>
+								</div>
+								<div class="form-group">
+									<label for="comments">Message</label><span style="color:red">*</span> :
+									<textarea id="comments" class="form-control" required placeholder="Write here..." rows="5"></textarea>
+								</div>
+								<div class="form-group">
+									<div class="form-check">
+										<input type="checkbox" id="subscribe" class="form-check-input" style="margin-top:0.75rem" required>
+										<label for="subscribe" class="form-check-label ml-1"><span style="color:red">*</span>I have read and agree to the Terms and Conditions and Privacy Policy</label>
+									</div>
+								</div>
+								<p class="p-form"><span style="color:red">*</span>Mandatory Fields</p>
+								<div class="submit-btn">
+									<button class="btn btn-outline-success">Submit</button>
+								</div>
+							</form>
+							<script>$( "form" ).each( createAllErrors );</script>
+						</div>
+					</div>
+				</section>
+        </section>
+
+		<footer class="container-fluid">
+            <div class="row flex-column-reverse flex-md-row" >
+                <div class="col-md-3" ></div>
+                <div class="col-md-6">
+                    <p class="myfooter text-center">&copy OUTDOORS 2020. All Rights Reserved.</p>
+                </div>
+                <div class="col-md-3 text-md-right text-center px-0" >
+					<a href="https://www.facebook.com/Outdoor.Adventures.Singapore" class="facebook social-media"><i class="fa fa-facebook"></i></a>
+                    <a href="https://twitter.com/OutdoorAdvSg" class="twitter social-media"><i class="fa fa-twitter"></i></a>
+                    <a href="https://wa.me/6597863784" class="whatsapp social-media"><i class="fa fa-whatsapp"></i></a>
+                 </div>
+             </div>
+        </footer>
+    </body>
+</html>
